@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo">
+      <h2>TO-DO LIST APP</h2>
+      <input type="text" id="inps">
+      <button id="but" onclick="Add()">ADD TASK</button>
+      <div class="text"></div>
+    </div>
+   
+    
+     
+    
+  </div>
+  <script>
+    let inputs=document.getElementById('inps');
+    let text=document.querySelector('.text')
+    function Add(){
+    if(inputs.value==''){
+      alert('please enter something')
+    }
+    else{
+      let newEle=document.createElement("ul");
+      newEle.innerHTML=`${inputs.value} <i class="fa-solid fa-trash"></i>` 
+      text.appendChild(newEle)
+      inputs.value='';
+      newEle.querySelector('i').addEventListener('click',remove);
+      function remove(){
+        newEle.remove()
+      }
+    }
+  }
+  </script>
+
+</body>
+</html>

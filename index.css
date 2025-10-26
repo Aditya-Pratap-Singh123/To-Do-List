@@ -1,0 +1,40 @@
+body{
+  background-color: aqua;
+}
+.todo{
+  height: 300px;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px;
+}
+h2{
+  text-align: center;
+  
+}
+#inps{
+  height: 29px;
+  width: 300px;
+  
+ margin-left: 60px;
+ border-radius: 10px;
+ background-color: white;
+ border: 5px solid;
+ font-size: 20px;
+
+}
+#but{
+  height: 50px;
+  width: 90px;
+  border-radius: 10px;
+  margin-left: 5px;
+  color: white;
+  background-color: black;
+
+}
+#but:active{
+  background-color: yellow;
+}
+ul{
+  font-size: 20px;
+}
